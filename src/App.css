@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #dab171;
+  background-color: #6d1515;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,15 @@
   color: rgb(0, 0, 0);
 }
 
+
+.final {
+  width: 90%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: bisque;
+  box-shadow: 10px 5px 5px 10px black;
+  
+}
 
 .titles {
   font-size: large;
@@ -30,6 +39,8 @@
   font-size: large;
   text-align: left;
   border-collapse: collapse;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modules td, th {
@@ -53,9 +64,14 @@ p {
 
 h4{
   font-family: 'Times New Roman', Times, serif;
-  padding-top: 35px;
+  border-top: #6b0707 solid 3px;
+  padding-top: 20px;
   padding-bottom: 5px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
+.dropDown {
+  color: #6b0707;
+  padding-bottom: 15px;
+}

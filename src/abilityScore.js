@@ -40,7 +40,7 @@ const AbilityScoreInfo = () => {
     console.log("abilityInfo:", abilityInfo);
     return (
       <div>
-        <DropdownButton title = "Select Ability Score For Reference">
+        <DropdownButton title = "Select Ability Score For Reference" className='dropDown'>
           {ability.map(a => (
             <Dropdown.Item key={a.index} onClick={() => handleSelect(a)}>
               {a.name}

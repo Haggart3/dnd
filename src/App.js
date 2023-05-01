@@ -60,20 +60,25 @@ function Adventures() {
   )
 }
 
+
+
+
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <div className='titles'>
-          <h1>Welcome to your personal D&D 5e Reference Sheet!</h1>
-          <h2>Store your currently owned modules and utalize our build in reference tool in order to get a refresher on what certain abilities do!</h2>
+        <div className='final'>
+          <div className='titles'>
+            <h1>Welcome to your personal D&D 5e Reference Sheet!</h1>
+            <h2>Store your currently owned modules and utalize our build in reference tool in order to get a refresher on what certain abilities do!</h2>
 
 
-        </div>
-        <div className='content'>
-            <AbilityScoreInfo />
-            <h4>Your saved adventure modules:</h4>
-            <Adventures />
+          </div>
+          <div className='content'>
+              <AbilityScoreInfo />
+              <h4>Your saved adventure modules:</h4>
+              <Adventures />
+          </div>
         </div>
       </header>
     </div>
