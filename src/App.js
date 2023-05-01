@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 /*import { Dropdown, DropdownButton } from 'react-bootstrap';*/
 import AbilityScoreInfo from './abilityScore'
 
-
+/*
 function APItest() {
   const [data, setData] = useState(null);
 
@@ -23,7 +23,7 @@ function APItest() {
     </div>
   );
 }
-
+*/
 
 
 function App() {
