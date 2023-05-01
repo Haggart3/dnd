@@ -1,10 +1,12 @@
 /* import logo from './logo.svg'; */
 import './App.css';
-/*import React, {useState, useEffect} from 'react';*/
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 /*import { Dropdown, DropdownButton } from 'react-bootstrap';*/
 import AbilityScoreInfo from './abilityScore'
+import { supabase } from './supabaseClient';
+/*import { Table } from 'react-bootstrap';*/
 
 /*
 function APItest() {
@@ -26,12 +28,40 @@ function APItest() {
 */
 
 
+function Adventures() {
+  const [myModules, setMyModules] = useState([]);
+  async function getModules() {
+    let { data: modules} = await supabase
+      .from('Modules')
+      .select('*')
+    setMyModules(modules);
+  }
+  getModules();
+  return(
+    <table className='modules'>
+    {
+      myModules.map(m => (
+        <tr>
+          <td>{m.Title}</td>
+          <td>{m.Length}</td>
+          <td>{m.Levels}</td>
+          <td>{m.Description}</td>
+          <td>{m.Completed}</td>
+        </tr>
+      ))
+    }
+    </table>
+  )
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <AbilityScoreInfo />
-
+        <div>
+          <AbilityScoreInfo />
+          <Adventures />
+        </div>
       </header>
     </div>
   );
